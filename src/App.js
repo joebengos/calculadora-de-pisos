@@ -1,15 +1,24 @@
 import React from "react";
-import { Header } from "./components/Header";
-import { Options } from "./components/Options";
-import { FormLeft } from "./components/FormLeft";
-import { FormRight } from "./components/FormRight";
+import { Options } from "./pages/Options";
+import { FormLeft } from "./pages/FormLeft";
+import { FormRight } from "./pages/FormRight";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Options />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Options />
+        </Route>
+        <Route path="/use-box">
+          <FormRight />
+        </Route>
+        <Route path="/use-messure">
+          <FormLeft />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
