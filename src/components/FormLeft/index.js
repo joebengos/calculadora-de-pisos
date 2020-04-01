@@ -33,7 +33,9 @@ export const FormLeft = () => (
             </p>
           </div>
         </div>
-        
+        <div className="row justify-content-center">
+            <button type="button" class="btn btn-info">Calcular</button>
+        </div>
       </div>
     </div>
   </div>
