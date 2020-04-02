@@ -1,8 +1,11 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import { Options } from "./pages/Options";
 import { FormLeft } from "./pages/FormLeft";
 import { FormRight } from "./pages/FormRight";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Result } from "./pages/Result";
+
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
         </Route>
         <Route path="/use-messure">
           <FormLeft />
+        </Route>
+        <Route path="/result">
+          <Result />
         </Route>
       </Switch>
     </Router>

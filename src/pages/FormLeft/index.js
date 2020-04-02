@@ -9,7 +9,15 @@ export const FormLeft = () => {
 
   const handleCalc = () => {
     if (Warea.length === 0 || Harea.length === 0) alert('Preencha todos os campos!')
+    const largura = parseFloat(Warea.replace(/,/g,'.'));
+    const comprimento = parseFloat(Harea.replace(/,/g,'.'));
+    const total = largura * comprimento;
 
+    console.log(
+    `Largura: ${largura} --- ${Warea}`,
+    `comprimento: ${comprimento}`,
+      total)
+  
   }
 
   return (
@@ -23,22 +31,17 @@ export const FormLeft = () => {
               <form className="form-left">
                 <div className="input-group">
                   <label>Largura do ambiente em metros</label>
-                  <input type="text" value={Warea} onChange={(event) => {setWarea(event.target.value.replace(/\D/g,''))}} />
+                  <input type="text" value={Warea} onChange={(event) => {setWarea(event.target.value.replace(/[a-z A-Z]/g,''))}} />
                 </div>
                 <div className="input-group">
                   <label>Comprimento do ambiente em metros</label>
-                  <input type="text" value={Harea} onChange={(event) => {setHarea(event.target.value.replace(/\D/g,''))}} />
+                  <input type="text" value={Harea} onChange={(event) => {setHarea(event.target.value.replace(/[a-z A-Z]/g,''))}} />
                 </div>
               </form>
               <div className="colum-text">
-                <h4>Texto sobre os valores do calculo</h4>
+                <h4>Calculo por metro quadrado</h4>
                 <p>
-                  Texto sobre os valores do calculoLorem Ipsum is simply dummy
-                  text of the printing and typesetting industry. Lorem Ipsum has
-                  been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and scrambled it
-                  to make a type specimen book. It has survived not only five
-                  centuries, but also the leap into electronic typesetting,
+                  Pode ser muito chato ter que calcular algumas coisas na mão ou de cabeça
                 </p>
               </div>
             </div>

@@ -21,25 +21,25 @@ export const FormRight = () => {
                 <div className="form-column">
                   <div className="input-group">
                     <label>Total em metros quadrados da área</label>
-                    <input type="text" value={area} onChange={(event) => {setArea(event.target.value.replace(/\D/g,''))}} />
+                    <input type="text" value={area} onChange={(event) => {setArea(event.target.value.replace(/[a-z A-Z]/g,''))}} />
                   </div>
                   <div className="input-group">
                     <label>Largura do piso em CM</label>
-                    <input type="text" value={Wpiso} onChange={(event) => {setWPiso(event.target.value.replace(/\D/g,''))}} />
+                    <input type="text" value={Wpiso} onChange={(event) => {setWPiso(event.target.value.replace(/[a-z A-Z]/g,''))}} />
                   </div>
                   <div className="input-group">
                     <label>Altura do piso em CM</label>
-                    <input type="text" value={Hpiso} onChange={(event) => {setHpiso(event.target.value.replace(/\D/g,''))}} />
+                    <input type="text" value={Hpiso} onChange={(event) => {setHpiso(event.target.value.replace(/[a-z A-Z]/g,''))}} />
                   </div>
                 </div>
                 <div className="form-column">
                   <div className="input-group">
                     <label>Quantidade de pisos por caixa</label>
-                    <input type="text" value={pisoCx} onChange={(event) => {setPisoCx(event.target.value.replace(/\D/g,''))}} />
+                    <input type="text" value={pisoCx} onChange={(event) => {setPisoCx(event.target.value.replace(/[a-z A-Z]/g,''))}} />
                   </div>
                   <div className="input-group">
                     <label>Valor de 1 caixa</label>
-                    <input type="text" value={valoCx} onChange={(event) => {setValorCx(event.target.value.replace(/\D/g,''))}} />
+                    <input type="text" value={valoCx} onChange={(event) => {setValorCx(event.target.value.replace(/[a-z A-Z]/g,''))}} />
                   </div>
                 </div>
               </form>

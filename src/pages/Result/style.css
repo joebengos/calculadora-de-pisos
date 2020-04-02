@@ -1,0 +1,30 @@
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-weight: lighter;
+  font-size: 13px;
+}
+
+.form-full {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-column {
+  width: calc(50% - 10px);
+}
+
+.form-column > div > div,
+.form-column input {
+  width: 100%;
+}
+
+h5 {
+  display: block;
+  width: 100%;
+}
