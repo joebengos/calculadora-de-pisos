@@ -2,6 +2,7 @@
   "name": "calculadora-de-pisos",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://joebengos.github.io/calculadora-de-pisos/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
