@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.abebfa88.chunk.css",
-    "main.js": "/static/js/main.05a4b7b3.chunk.js",
-    "main.js.map": "/static/js/main.05a4b7b3.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.8e4e723c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.8e4e723c.js.map",
-    "static/js/2.2f88e27f.chunk.js": "/static/js/2.2f88e27f.chunk.js",
-    "static/js/2.2f88e27f.chunk.js.map": "/static/js/2.2f88e27f.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.b98d0b02e31e4f70274f30148499fc42.js": "/precache-manifest.b98d0b02e31e4f70274f30148499fc42.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.abebfa88.chunk.css.map": "/static/css/main.abebfa88.chunk.css.map",
-    "static/js/2.2f88e27f.chunk.js.LICENSE.txt": "/static/js/2.2f88e27f.chunk.js.LICENSE.txt",
-    "static/media/box.svg": "/static/media/box.991518aa.svg",
-    "static/media/logo.svg": "/static/media/logo.574dd35b.svg",
-    "static/media/tape-measure.svg": "/static/media/tape-measure.29b6bd64.svg"
+    "main.css": "/calculadora-de-pisos/static/css/main.abebfa88.chunk.css",
+    "main.js": "/calculadora-de-pisos/static/js/main.b7f84a1b.chunk.js",
+    "main.js.map": "/calculadora-de-pisos/static/js/main.b7f84a1b.chunk.js.map",
+    "runtime-main.js": "/calculadora-de-pisos/static/js/runtime-main.4d7dcc1e.js",
+    "runtime-main.js.map": "/calculadora-de-pisos/static/js/runtime-main.4d7dcc1e.js.map",
+    "static/js/2.2f88e27f.chunk.js": "/calculadora-de-pisos/static/js/2.2f88e27f.chunk.js",
+    "static/js/2.2f88e27f.chunk.js.map": "/calculadora-de-pisos/static/js/2.2f88e27f.chunk.js.map",
+    "index.html": "/calculadora-de-pisos/index.html",
+    "precache-manifest.102741cf219b1d1dffce21e095e08877.js": "/calculadora-de-pisos/precache-manifest.102741cf219b1d1dffce21e095e08877.js",
+    "service-worker.js": "/calculadora-de-pisos/service-worker.js",
+    "static/css/main.abebfa88.chunk.css.map": "/calculadora-de-pisos/static/css/main.abebfa88.chunk.css.map",
+    "static/js/2.2f88e27f.chunk.js.LICENSE.txt": "/calculadora-de-pisos/static/js/2.2f88e27f.chunk.js.LICENSE.txt",
+    "static/media/box.svg": "/calculadora-de-pisos/static/media/box.991518aa.svg",
+    "static/media/logo.svg": "/calculadora-de-pisos/static/media/logo.574dd35b.svg",
+    "static/media/tape-measure.svg": "/calculadora-de-pisos/static/media/tape-measure.29b6bd64.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8e4e723c.js",
+    "static/js/runtime-main.4d7dcc1e.js",
     "static/js/2.2f88e27f.chunk.js",
     "static/css/main.abebfa88.chunk.css",
-    "static/js/main.05a4b7b3.chunk.js"
+    "static/js/main.b7f84a1b.chunk.js"
   ]
 }
