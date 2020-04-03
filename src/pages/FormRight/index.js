@@ -1,13 +1,36 @@
 import React, {useState} from "react";
 import "./style.css";
+import {useHistory} from "react-router-dom";
 import { Header } from "../../components/Header";
 export const FormRight = () => {
 
-  const [area, setArea] = useState(''); // Area em m quadrados
-  const [Wpiso, setWPiso] = useState(''); // largura de um piso
-  const [Hpiso, setHpiso] = useState(''); // altura de um piso
-  const [pisoCx, setPisoCx] = useState(''); // Quantidade de piso / caixa
-  const [valoCx, setValorCx] = useState(''); // valor de uma caixa
+  const [area, setArea] = useState(0); // Area em m quadrados
+  const [Wpiso, setWPiso] = useState(0); // largura de um piso
+  const [Hpiso, setHpiso] = useState(0); // altura de um piso
+  const [pisoCx, setPisoCx] = useState(0); // Quantidade de piso / caixa
+  const [valoCx, setValorCx] = useState(0); // valor de uma caixa
+  const INTL = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
+  let history = useHistory();
+
+  /*
+   * Total de caixas
+   * total em m quadrados
+   * valor 
+  */
+
+  const calcCaixas = () => {
+    let  CMQuadradoPiso = (parseFloat(Wpiso) * parseFloat(Hpiso));
+    let CMQuadradoDaCaixa =  CMQuadradoPiso * parseInt(pisoCx);
+    let totalCaixas = Math.round(parseFloat(area) / (CMQuadradoDaCaixa / 10000));
+    let totalObra = INTL.format(totalCaixas * parseFloat(valoCx));
+
+
+    history.push({
+      pathname: "/result",
+      state: { totalQuadrado: area, totalCaixas, totalObra },
+    });
+     
+  }
 
   return (
     <>
@@ -45,7 +68,7 @@ export const FormRight = () => {
               </form>
             </div>
             <div className="row justify-content-center">
-              <button type="button" class="btn btn-info">
+              <button type="button" className="btn btn-info" onClick={calcCaixas}>
                 Calcular
               </button>
             </div>
