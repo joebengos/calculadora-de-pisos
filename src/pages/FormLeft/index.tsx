@@ -1,29 +1,23 @@
-import React, { useState } from "react";
-import "./style.css";
-import { Header } from "../../components/Header";
-import { useHistory } from "react-router-dom";
+import React, {useState} from 'react';
+import './style.css';
+import {Header} from '../../components/Header';
+import {useHistory} from 'react-router-dom';
 
-export const FormLeft = () => {
-  const [Warea, setWarea] = useState(""); // Area em m quadrados
-  const [Harea, setHarea] = useState(""); // largura de um piso
+export const FormLeft: React.FC<{}> = () => {
+  const [Warea, setWarea] = useState(''); // Area em m quadrados
+  const [Harea, setHarea] = useState(''); // largura de um piso
   let history = useHistory();
 
   const handleCalc = () => {
     if (Warea.length === 0 || Harea.length === 0)
-      alert("Preencha todos os campos!");
-    const largura = parseFloat(Warea.replace(/,/g, "."));
-    const comprimento = parseFloat(Harea.replace(/,/g, "."));
+      alert('Preencha todos os campos!');
+    const largura = parseFloat(Warea.replace(/,/g, '.'));
+    const comprimento = parseFloat(Harea.replace(/,/g, '.'));
     const total = largura * comprimento;
 
-    console.log(
-      `Largura: ${largura} --- ${Warea}`,
-      `comprimento: ${comprimento}`,
-      total
-    );
-
     history.push({
-      pathname: "/result",
-      state: { totalQuadrado: total, totalCaixas: null, totalObra: null },
+      pathname: '/result',
+      state: {totalQuadrado: total, totalCaixas: null, totalObra: null},
     });
   };
 
@@ -41,8 +35,12 @@ export const FormLeft = () => {
                   <input
                     type="text"
                     value={Warea}
-                    onChange={(event) => {
-                      setWarea(event.target.value.replace(/[a-z A-Z]/g, ""));
+                    onChange={event => {
+                      setWarea(
+                        event.target.value
+                          .replace(/[a-z A-Z]/g, '')
+                          .replace(/,/g, '.'),
+                      );
                     }}
                   />
                 </div>
@@ -51,8 +49,12 @@ export const FormLeft = () => {
                   <input
                     type="text"
                     value={Harea}
-                    onChange={(event) => {
-                      setHarea(event.target.value.replace(/[a-z A-Z]/g, ""));
+                    onChange={event => {
+                      setHarea(
+                        event.target.value
+                          .replace(/[a-z A-Z]/g, '')
+                          .replace(/,/g, '.'),
+                      );
                     }}
                   />
                 </div>
@@ -69,8 +71,7 @@ export const FormLeft = () => {
               <button
                 type="button"
                 className="btn btn-info"
-                onClick={handleCalc}
-              >
+                onClick={handleCalc}>
                 Calcular
               </button>
             </div>
